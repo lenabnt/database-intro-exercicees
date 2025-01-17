@@ -1,0 +1,33 @@
+\begin{table}[]
+\begin{tabular}{llll}
+Propriété           & Type          & Entité          & Contraintes           \\
+id                  & INT           & authors         & PRIMARY KEY           \\
+firstname           & VARCHAR(255)  & authors         & NOT NULL              \\
+lastname            & VARCHAR(255)  & authors         & NOT NULL              \\
+country             & VARCHAR(255)  & authors         & NOT NULL              \\
+date\_of\_birth     & DATE          & authors         & NOT NULL              \\
+date\_of\_death     & DATE          & authors         &                       \\
+id                  & INT           & editors         & PRIMARY KEY           \\
+name                & VARCHAR (255) & editors         & NOT NULL              \\
+id                  & INT           & members         & PRIMARY KEY           \\
+firstname           & VARCHAR (255) & members         & NOT NULL              \\
+lastname            & VARCHAR (255) & members         & NOT NULL              \\
+email               & VARCHAR (255) & members         & NOT NULL              \\
+date\_of\_birth     & DATE          & members         & NOT NULL              \\
+registered          & BOOLEAN       & members         & NOT NULL              \\
+id                  & INT           & books           & PRIMARY KEY           \\
+title               & VARCHAR(255)  & books           & NOT NULL              \\
+year                & INT           & books           & NOT NULL              \\
+author\_id          & INT           & books           & NOT NULL, FOREIGN KEY \\
+isbn                & VARCHAR(255)  & books\_editions & NOT NULL              \\
+book\_id            & INT           & books\_editions & NOT NULL, FOREIGN KEY \\
+editor\_id          & INT           & books\_editions & NOT NULL, FOREIGN KEY \\
+publication\_date   & DATE          & books\_editions & NOT NULL              \\
+id                  & INT           & loans           & PRIMARY KEY           \\
+book\_edition\_isbn & VARCHAR(255)  & loans           & NOT NULL, FOREIGN KEY \\
+member\_id          & INT           & loans           & NOT NULL, FOREIGN KEY \\
+loan\_date          & DATE          & loans           & NOT NULL              \\
+return\_date        & DATE          & loans           & NOT NULL              \\
+is\_returned        & BOOLEAN       & loans           & NOT NULL             
+\end{tabular}
+\end{table}
