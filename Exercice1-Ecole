@@ -1,0 +1,12 @@
+\begin{table}[]
+\begin{tabular}{llll}
+Propriété    & Type         & Entité  & Contraintes \\
+NumeroSS     & INT          & enfant  & NOT NULL    \\
+NomENF       & VARCHAR(255) & enfant  &             \\
+Prenom       & VARCHAR(255) & enfant  &             \\
+CodeEcole    & INT          & ecole   & NOT NULL    \\
+NomEC        & INT          & ecole   &             \\
+NomC         & VARCHAR(255) & commune &             \\
+Code\_postal & INT          & commune & NOT NULL   
+\end{tabular}
+\end{table}
